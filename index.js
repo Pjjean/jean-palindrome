@@ -1,3 +1,7 @@
+module.exports = Phrase;
+
+
+
 //Reverses a string.
 //add reverse to all strings. because natively string.reverse() does not work;
 String.prototype.reverse=function reverse(){
