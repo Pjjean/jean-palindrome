@@ -22,20 +22,31 @@ function palindrome(string){
 function Phrase(string){
   this.content=string
 
-  //refactor
-  this.processor=function(whatever){
-  return whatever.toLowerCase()
-  }
+  this.letter=function letter(){
+      return Array.from(this.content).filter(i=>i.match(/[a-zA-Z]+/g)).join("")
+    };
 
-  this.lowerCaseContent=function lowerCaseContent(){
-  return this.processor(this.content)
-  }
 
+  //return (this.content.match(/[a-z]/gi) || []).join("")
+  //(because empty match results return error instead of empty array)
+
+  //   let letters=[]
+  //   for (let i = 0; i < this.content.length; i++) {
+  //     if(this.content[i].match(/[a-zA-Z]+/g))
+  //     letters.push(this.content[i].match(/[a-zA-Z]+/g))
+  //   }
+  //   return letters.join("")
+  // }
+
+  this.processedContent=function processedContent(){
+    return this.letter().toLowerCase()
+  }
 
   //returns true if the phrase is a palindrome, false otherwise.
   this.palindrome=function palindrome(){
-    return this.lowerCaseContent() === this.lowerCaseContent().reverse()
+    return this.processedContent() === this.processedContent().reverse()
   }
+
   //Makes the phrase LOUDER.
   this.louder=function louder(){
     return this.content = this.content.toUpperCase()
@@ -49,7 +60,7 @@ function TranslatedPhrase(string, translation){
   this.translation=translation
 
   //returns translation in lowercase for palindrome testing.
-  this.lowerCaseContent=function lowerCaseContent(){
+  this.processedContent=function processedContent(){
     return this.processor(this.translation)
   }
 }
