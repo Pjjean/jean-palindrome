@@ -1,6 +1,6 @@
 {
   "name": "jeanpeng-palindrome",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "palindrome detector",
   "main": "index.js",
   "scripts": {
