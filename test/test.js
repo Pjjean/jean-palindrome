@@ -23,6 +23,11 @@ describe("Phrase", function(){
       assert.strictEqual(punctuatedPalindrome.letter(),"MadamImAdam")
     })
 
+    it("should return false when string is empty", function(){
+      let emptyString = new Phrase("")
+      assert(!emptyString.palindrome())
+    })
+
     it("should return true for a palindrome with punctuation", function(){
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.")
       assert(punctuatedPalindrome.palindrome())

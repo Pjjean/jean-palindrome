@@ -44,9 +44,12 @@ function Phrase(string){
 
   //returns true if the phrase is a palindrome, false otherwise.
   this.palindrome=function palindrome(){
-    return this.processedContent() === this.processedContent().reverse()
+    if (this.letter()){
+      return this.processedContent() === this.processedContent().reverse()
+    } else {
+      return false
+    }
   }
-
   //Makes the phrase LOUDER.
   this.louder=function louder(){
     return this.content = this.content.toUpperCase()
@@ -55,17 +58,17 @@ function Phrase(string){
 
 
 //defines a translated phrase object.
-function TranslatedPhrase(string, translation){
-  this.content=string
-  this.translation=translation
+// function TranslatedPhrase(string, translation){
+//   this.content=string
+//   this.translation=translation
 
   //returns translation in lowercase for palindrome testing.
-  this.processedContent=function processedContent(){
-    return this.processor(this.translation)
-  }
-}
+//   this.processedContent=function processedContent(){
+//     return this.processor(this.translation)
+//   }
+// }
 
-TranslatedPhrase.prototype = new Phrase()
+// TranslatedPhrase.prototype = new Phrase()
 
 //blank method to string prototype: returns true is string consists solely of whitespace or is empty
 String.prototype.blank=function blank(){

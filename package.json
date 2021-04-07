@@ -1,6 +1,6 @@
 {
-  "name": "jeanp-palindrome",
-  "version": "0.1.0",
+  "name": "jeanpeng-palindrome",
+  "version": "0.2.1",
   "description": "palindrome detector",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Pjjean/jean-palindrome.git"
+    "url": "https://github.com/Pjjean/jean-palindrome"
   },
   "keywords": [
     "javascript",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Pjjean/jean-palindrome/issues"
   },
-  "homepage": "https://github.com/Pjjean/jean-palindrome#readme"
+  "homepage": "https://github.com/Pjjean/jean-palindrome#readme",
+  "directories": {
+    "test": "test"
+  }
 }
